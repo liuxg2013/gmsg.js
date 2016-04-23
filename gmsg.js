@@ -90,9 +90,9 @@ $.gmsg = function(options){
 	   
       switch(theme){
       case "confirm":
-    	  settings.showTitle = true ;
-		  settings.titleText = settings.titleText == "标题" ? "提醒" : settings.titleText ;
-		  settings.titleIcon = settings.titleIcon == "fa-leaf" ? "fa-question-circle" : settings.titleIcon ;
+    	 // settings.showTitle = true ;
+		 // settings.titleText = settings.titleText == "标题" ? "提醒" : settings.titleText ;
+		 // settings.titleIcon = settings.titleIcon == "fa-leaf" ? "fa-question-circle" : settings.titleIcon ;
 		  contentHtml = "确定要这样操作吗？" ;
 		  contentIcon = "fa-question-circle info" ;
     	  break ;
@@ -166,7 +166,11 @@ $.gmsg = function(options){
 				  '<i class = "fa '+settings.contentIcon+'"></i>'+
 				  (settings.contentHtml == null || settings.contentHtml == "" ? "" : '<span class = "content">'+settings.contentHtml+'</span>') +
 			    '</div>';
-	 $(body).appendTo(msg);	
+      var $body = $(body);
+      if(settings.theme == "confirm"){ 
+    	  $body.addClass("padding20");
+	  }
+      $body.appendTo(msg);
    }
    
    /**
