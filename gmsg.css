@@ -71,17 +71,19 @@
 .gmsg .gfooter {
 	text-align: center ;
 	background-color: #fff;
-	border: 1px solid #858585;
+	border-top: 1px solid #858585;
 	cursor: pointer;
 	font-family: 微软雅黑;
 	outline: none;
-	font-size: 12px;
-	padding : 3px;
-	margin: 3px;
+	font-size: 14px;
+	line-height : 30px;
 }
-.gmsg .gfooter:hover {
-	background-color: #F5F5F5;
+
+.padding20{
+	padding : 22px 20px !important;
+	width : 200px;
 }
+
 /* 色块 */
 .fa.info{
 	color : #428BCA;
